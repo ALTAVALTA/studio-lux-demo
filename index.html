@@ -1,0 +1,1468 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Студия Люкс - салон красоты в Калининграде · Карла Маркса, 30</title>
+<meta name="description" content="Салон красоты «Студия Люкс» в центре Калининграда: стрижки, окрашивание, косметология, массаж, маникюр. Парковка во дворе. Запись онлайн и по телефону +7 (4012) 93-35-55.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect x='6' y='6' width='12' height='12' rx='1' transform='rotate(45 12 12)' fill='%23b98a3c'/%3E%3C/svg%3E">
+<style>
+/* ============ ШРИФТЫ (локальные файлы woff2 из папки fonts/) ============ */
+@font-face{font-family:'Playfair Display';src:url('fonts/playfair-display-400.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap;}
+@font-face{font-family:'Playfair Display';src:url('fonts/playfair-display-400i.woff2') format('woff2');font-weight:400;font-style:italic;font-display:swap;}
+@font-face{font-family:'Playfair Display';src:url('fonts/playfair-display-500.woff2') format('woff2');font-weight:500;font-style:normal;font-display:swap;}
+@font-face{font-family:'Playfair Display';src:url('fonts/playfair-display-600.woff2') format('woff2');font-weight:600;font-style:normal;font-display:swap;}
+@font-face{font-family:'Playfair Display';src:url('fonts/playfair-display-700.woff2') format('woff2');font-weight:700;font-style:normal;font-display:swap;}
+@font-face{font-family:'Manrope';src:url('fonts/manrope-400.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap;}
+@font-face{font-family:'Manrope';src:url('fonts/manrope-500.woff2') format('woff2');font-weight:500;font-style:normal;font-display:swap;}
+@font-face{font-family:'Manrope';src:url('fonts/manrope-600.woff2') format('woff2');font-weight:600;font-style:normal;font-display:swap;}
+@font-face{font-family:'Manrope';src:url('fonts/manrope-700.woff2') format('woff2');font-weight:700;font-style:normal;font-display:swap;}
+@font-face{font-family:'Manrope';src:url('fonts/manrope-800.woff2') format('woff2');font-weight:800;font-style:normal;font-display:swap;}
+
+/* ============ БАЗА ============ */
+:root{
+  --ink:#17130e;
+  --ink2:#211b13;
+  --ink3:#2b2418;
+  --cream:#f5efe3;
+  --cream2:#ece2cf;
+  --paper:#faf6ee;
+  --gold:#b98a3c;
+  --gold-l:#dcc08a;
+  --gold-soft:rgba(185,138,60,.32);
+  --line:#e2d8c2;
+  --mut:#7c7263;
+  --mut-d:rgba(245,239,227,.68);
+  --font-head:'Playfair Display',Georgia,'Times New Roman',serif;
+  --font-body:'Manrope','Segoe UI',system-ui,-apple-system,sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;font-family:var(--font-body);background:var(--paper);color:var(--ink);
+  font-size:16px;line-height:1.6;overflow-x:clip;
+  -webkit-font-smoothing:antialiased;
+}
+/* лёгкое киношное зерно поверх всей страницы */
+body::after{
+  content:'';position:fixed;inset:0;z-index:2000;pointer-events:none;opacity:.035;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+img{max-width:100%;display:block;}
+a{color:inherit;}
+h1,h2,h3{font-family:var(--font-head);font-weight:600;line-height:1.15;margin:0;}
+p{margin:0;}
+section{scroll-margin-top:86px;}
+.wrap{width:100%;max-width:1200px;margin-inline:auto;padding-inline:clamp(16px,4vw,24px);}
+
+/* ============ КНОПКИ ============ */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  min-height:48px;padding:12px 28px;border-radius:3px;border:1px solid transparent;
+  font-family:var(--font-body);font-weight:800;font-size:13px;letter-spacing:.12em;text-transform:uppercase;
+  text-decoration:none;cursor:pointer;transition:transform .25s ease,box-shadow .25s ease,background .25s ease,border-color .25s ease,color .25s ease;
+  white-space:nowrap;
+}
+.btn svg{width:16px;height:16px;flex:none;}
+.btn-gold{background:linear-gradient(180deg,#dcbc7c 0%,#b98a3c 100%);color:#241a08;box-shadow:0 8px 24px -10px rgba(185,138,60,.7);}
+.btn-gold:hover{transform:translateY(-2px);box-shadow:0 14px 30px -10px rgba(185,138,60,.85);}
+.btn-dark{background:var(--ink);color:var(--cream);border-color:var(--ink);}
+.btn-dark:hover{transform:translateY(-2px);background:var(--ink3);}
+.btn-ghost{background:transparent;color:var(--cream);border-color:rgba(220,192,138,.55);}
+.btn-ghost:hover{border-color:var(--gold-l);background:rgba(220,192,138,.1);transform:translateY(-2px);}
+.btn-line{background:transparent;color:var(--ink);border-color:var(--ink);}
+.btn-line:hover{background:var(--ink);color:var(--cream);transform:translateY(-2px);}
+.btn-sm{min-height:44px;padding:10px 18px;font-size:12px;}
+.btn-block{width:100%;}
+
+/* ============ ШАПКА ============ */
+.site-head{
+  position:fixed;top:42px;left:0;right:0;z-index:1000;
+  background:rgba(23,19,14,.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
+  border-bottom:1px solid rgba(220,192,138,.16);
+}
+.head-in{display:flex;align-items:center;justify-content:space-between;gap:14px;min-height:72px;}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--cream);}
+.logo-mark{width:30px;height:30px;flex:none;display:grid;place-items:center;border:1px solid var(--gold);transform:rotate(45deg);}
+.logo-mark span{transform:rotate(-45deg);font-family:var(--font-head);font-size:15px;color:var(--gold-l);line-height:1;}
+.logo-txt{font-family:var(--font-head);font-size:19px;letter-spacing:.14em;text-transform:uppercase;line-height:1.1;}
+.logo-txt em{font-style:normal;color:var(--gold-l);}
+.nav-links{display:flex;gap:4px;align-items:center;}
+.nav-links a{
+  display:inline-flex;align-items:center;min-height:44px;padding:8px 13px;
+  color:var(--mut-d);text-decoration:none;font-size:14px;font-weight:600;letter-spacing:.04em;
+  transition:color .2s;position:relative;
+}
+.nav-links a::after{content:'';position:absolute;left:13px;right:13px;bottom:8px;height:1px;background:var(--gold-l);transform:scaleX(0);transition:transform .25s;}
+.nav-links a:hover{color:var(--cream);}
+.nav-links a:hover::after{transform:scaleX(1);}
+.head-actions{display:flex;align-items:center;gap:12px;}
+.head-phone{display:inline-flex;align-items:center;gap:8px;color:var(--gold-l);text-decoration:none;font-weight:700;font-size:14px;min-height:44px;}
+.head-phone svg{width:16px;height:16px;}
+.burger{
+  display:none;width:48px;height:48px;flex:none;border:1px solid rgba(220,192,138,.4);border-radius:3px;
+  background:transparent;cursor:pointer;position:relative;padding:0;
+}
+.burger span{
+  position:absolute;left:12px;right:12px;height:2px;background:var(--cream);border-radius:2px;
+  transition:transform .3s ease,opacity .2s ease,top .3s ease;
+}
+.burger span:nth-child(1){top:17px;}
+.burger span:nth-child(2){top:23px;}
+.burger span:nth-child(3){top:29px;}
+.burger.is-open span:nth-child(1){top:23px;transform:rotate(45deg);}
+.burger.is-open span:nth-child(2){opacity:0;}
+.burger.is-open span:nth-child(3){top:23px;transform:rotate(-45deg);}
+
+/* мобильное меню: z ниже шапки, чтобы бургер всегда был кликабельным */
+.mobile-menu{
+  position:fixed;inset:0;z-index:900;background:var(--ink);
+  padding:100px clamp(20px,6vw,40px) 40px;display:flex;flex-direction:column;
+  opacity:0;visibility:hidden;transform:translateY(-8px);transition:opacity .3s ease,transform .3s ease,visibility .3s;
+  overflow-y:auto;
+}
+body.menu-open .mobile-menu{opacity:1;visibility:visible;transform:none;}
+body.menu-open{overflow:hidden;}
+.mobile-menu a.m-link{
+  display:flex;align-items:center;justify-content:space-between;min-height:54px;
+  padding:12px 4px;text-decoration:none;color:var(--cream);
+  font-family:var(--font-head);font-size:26px;border-bottom:1px solid rgba(220,192,138,.14);
+  transition:color .2s,padding-left .2s;
+}
+.mobile-menu a.m-link:hover{color:var(--gold-l);padding-left:10px;}
+.mobile-menu a.m-link svg{width:18px;height:18px;color:var(--gold);}
+.mobile-menu .m-foot{margin-top:auto;padding-top:28px;display:flex;flex-direction:column;gap:14px;}
+.mobile-menu .m-phone{display:flex;align-items:center;gap:10px;color:var(--gold-l);text-decoration:none;font-weight:700;min-height:44px;}
+.mobile-menu .m-phone svg{width:18px;height:18px;}
+.mobile-menu .m-hours{color:var(--mut-d);font-size:14px;}
+
+/* ============ ПЕРВЫЙ ЭКРАН ============ */
+.hero{
+  background:
+    radial-gradient(1100px 560px at 88% -12%, rgba(185,138,60,.30), transparent 60%),
+    radial-gradient(700px 420px at -10% 110%, rgba(185,138,60,.14), transparent 60%),
+    var(--ink);
+  color:var(--cream);min-height:100svh;display:flex;flex-direction:column;
+}
+.hero-body{flex:1;display:grid;grid-template-columns:1.08fr .92fr;gap:clamp(28px,5vw,72px);align-items:center;padding-top:clamp(30px,5vh,60px);padding-bottom:clamp(24px,4vh,44px);}
+.eyebrow{display:flex;align-items:center;gap:12px;font-size:12px;font-weight:800;letter-spacing:.3em;text-transform:uppercase;color:var(--gold-l);}
+.eyebrow::before{content:'';width:38px;height:1px;background:var(--gold);}
+.hero h1{font-size:clamp(34px,5.6vw,64px);margin:18px 0 18px;font-weight:600;}
+.hero h1 em{font-style:italic;color:var(--gold-l);font-weight:500;}
+.hero-sub{color:var(--mut-d);font-size:clamp(15px,1.6vw,18px);max-width:52ch;margin-bottom:28px;}
+.hero-cta{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:30px;}
+.hero-facts{display:flex;flex-wrap:wrap;gap:10px;}
+.chip{
+  display:inline-flex;align-items:center;gap:9px;padding:9px 15px;min-height:44px;
+  border:1px solid rgba(220,192,138,.32);border-radius:999px;font-size:13.5px;font-weight:600;color:var(--cream);
+  background:rgba(245,239,227,.04);
+}
+.chip svg{width:16px;height:16px;color:var(--gold-l);flex:none;}
+.hero-visual{position:relative;width:min(100%,440px);justify-self:end;}
+.hero-frame{position:relative;}
+.hero-frame::before{content:'';position:absolute;inset:0;transform:translate(12px,12px);border:1px solid rgba(220,192,138,.45);pointer-events:none;}
+.hero-frame .ph{position:relative;overflow:hidden;border-radius:2px;aspect-ratio:4/3}
+.hero-frame img{width:100%;height:100%;object-fit:cover;display:block}
+.hero-quote{
+  position:absolute;left:-16px;bottom:16px;max-width:210px;background:var(--ink2);border:1px solid rgba(220,192,138,.35);
+  padding:11px 13px;border-radius:2px;box-shadow:0 14px 30px -16px rgba(0,0,0,.65);
+}
+.hero-quote p{font-family:var(--font-head);font-style:italic;font-size:13.5px;line-height:1.35;color:var(--cream);}
+.hero-quote span{display:block;margin-top:6px;font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--gold-l);}
+
+/* бегущая строка - низ первого экрана */
+.marquee-zone{padding-bottom:18px;}
+.marquee{
+  background:linear-gradient(180deg,#dcbc7c,#b98a3c);color:#241a08;overflow:hidden;border-radius:4px;
+  box-shadow:0 14px 34px -16px rgba(185,138,60,.8);
+}
+.marquee-track{display:flex;width:max-content;animation:marquee 26s linear infinite;padding:13px 0;}
+.marquee:hover .marquee-track{animation-play-state:paused;}
+.marquee-track ul{display:flex;align-items:center;gap:34px;padding:0 17px;margin:0;list-style:none;}
+.marquee-track li{display:flex;align-items:center;gap:34px;font-size:13px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;white-space:nowrap;}
+.marquee-track li svg{width:9px;height:9px;flex:none;fill:#241a08;}
+@keyframes marquee{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+
+/* ============ ОБЩЕЕ ДЛЯ СЕКЦИЙ ============ */
+.sec{padding:clamp(64px,9vw,110px) 0;}
+.sec-head{max-width:760px;margin-bottom:clamp(36px,5vw,56px);}
+.sec-head .eyebrow{color:var(--gold);}
+.sec-head h2{font-size:clamp(30px,4.4vw,46px);margin:16px 0 14px;}
+.sec-head .lead{color:var(--mut);font-size:clamp(15px,1.6vw,17px);}
+.sec-dark{background:var(--ink);color:var(--cream);}
+.sec-dark .sec-head .eyebrow{color:var(--gold-l);}
+.sec-dark .sec-head .lead{color:var(--mut-d);}
+.sec-alt{background:var(--cream);}
+
+/* появление при прокрутке */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease;}
+.reveal.in{opacity:1;transform:none;}
+
+/* ============ О САЛОНЕ ============ */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,5vw,64px);align-items:start;}
+.about-txt>p{color:var(--mut);margin-bottom:16px;max-width:56ch;}
+.about-txt>p b{color:var(--ink);font-weight:700;}
+.perks{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:30px;}
+.perk{
+  display:flex;gap:13px;align-items:flex-start;padding:16px;border:1px solid var(--line);border-radius:4px;
+  background:#fff;transition:transform .25s ease,box-shadow .25s ease;
+}
+.perk:hover{transform:translateY(-3px);box-shadow:0 16px 34px -22px rgba(23,19,14,.4);}
+.perk-ic{width:42px;height:42px;flex:none;display:grid;place-items:center;background:rgba(185,138,60,.12);border:1px solid rgba(185,138,60,.3);border-radius:4px;color:var(--gold);}
+.perk-ic svg{width:20px;height:20px;}
+.perk h3{font-family:var(--font-body);font-size:14.5px;font-weight:800;letter-spacing:.02em;margin-bottom:3px;}
+.perk p{font-size:13px;color:var(--mut);line-height:1.45;}
+.about-media{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+.about-media .am{overflow:hidden;border-radius:4px;position:relative;}
+.about-media .am img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease;}
+.about-media .am:hover img{transform:scale(1.05);}
+.am-1{aspect-ratio:3/4;}
+.am-2{aspect-ratio:4/3;margin-top:34px;}
+.am-3{aspect-ratio:4/3;margin-top:-34px;}
+.am-4{aspect-ratio:3/4;}
+.am-cap{position:absolute;left:10px;bottom:10px;background:rgba(23,19,14,.78);color:var(--cream);font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:6px 10px;border-radius:2px;}
+
+/* ============ УСЛУГИ ============ */
+.services-grid{display:grid;grid-template-columns:.85fr 1.6fr;gap:clamp(24px,4vw,48px);align-items:start;}
+.services-photo{position:static;border-radius:4px;overflow:hidden;align-self:start;}
+.services-photo img{width:100%;height:auto;display:block;}
+.services-photo figcaption{position:absolute;left:12px;bottom:12px;background:rgba(23,19,14,.78);color:var(--cream);font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:6px 10px;border-radius:2px;}
+.srv-cats{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+.srv-cat{border:1px solid var(--line);border-radius:4px;background:#fff;padding:22px;display:flex;flex-direction:column;}
+.srv-cat-head{display:flex;align-items:center;gap:12px;margin-bottom:14px;}
+.srv-cat-head .perk-ic{width:44px;height:44px;}
+.srv-cat h3{font-family:var(--font-body);font-size:16px;font-weight:800;letter-spacing:.03em;}
+.srv-rows{display:flex;flex-direction:column;margin-bottom:16px;}
+.srv-row{
+  display:flex;align-items:center;gap:8px;width:100%;min-height:44px;padding:9px 6px;border:0;background:none;
+  cursor:pointer;text-align:left;font-family:var(--font-body);font-size:14.5px;color:var(--ink);
+  border-bottom:1px dashed var(--line);transition:background .2s,padding-left .2s;
+}
+.srv-row:last-child{border-bottom:0;}
+.srv-row:hover{background:rgba(185,138,60,.08);padding-left:10px;}
+.srv-row:hover .srv-price{color:var(--gold);}
+.srv-name{font-weight:600;}
+.srv-dots{flex:1;border-bottom:1px dotted rgba(124,114,99,.4);transform:translateY(-3px);}
+.srv-price{font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--mut);white-space:nowrap;transition:color .2s;}
+.price-note{
+  display:flex;gap:14px;align-items:flex-start;margin-top:26px;padding:18px 20px;border-radius:4px;
+  background:rgba(185,138,60,.1);border:1px solid rgba(185,138,60,.3);
+}
+.price-note svg{width:22px;height:22px;flex:none;color:var(--gold);margin-top:2px;}
+.price-note p{font-size:14px;color:var(--ink2);max-width:70ch;}
+.price-note b{font-weight:800;}
+.services-cta{display:flex;justify-content:center;margin-top:44px;}
+
+/* ============ РАБОТЫ ============ */
+.works-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;}
+.tile{margin:0;}
+.tile-img{aspect-ratio:3/4;overflow:hidden;border-radius:4px;background:var(--ink3);}
+.tile-img img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease;}
+.tile:hover .tile-img img{transform:scale(1.06);}
+.tile figcaption{padding:12px 2px 0;}
+.tile-tag{display:block;font-size:11px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-l);margin-bottom:4px;}
+.tile-name{font-family:var(--font-head);font-size:16.5px;color:var(--cream);line-height:1.3;}
+.tile-cta,.tile-info{border-radius:4px;display:flex;flex-direction:column;justify-content:center;gap:14px;padding:26px;min-height:100%;}
+.tile-cta{background:linear-gradient(160deg,#dcbc7c,#a97f36);color:#241a08;}
+.tile-cta h3{font-size:24px;color:#241a08;}
+.tile-cta p{font-size:14px;font-weight:600;color:rgba(36,26,8,.75);}
+.tile-cta .btn{align-self:flex-start;}
+.tile-info{background:var(--ink2);border:1px solid rgba(220,192,138,.25);}
+.tile-info h3{font-size:21px;color:var(--cream);margin-bottom:2px;}
+.tile-info ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:12px;}
+.tile-info li{display:flex;align-items:center;gap:10px;font-size:14px;color:var(--mut-d);font-weight:600;}
+.tile-info li svg{width:16px;height:16px;color:var(--gold-l);flex:none;}
+
+/* ============ МАСТЕР ============ */
+.master-grid{display:grid;grid-template-columns:.9fr 1.4fr;gap:clamp(26px,4vw,56px);align-items:stretch;}
+.master-card{
+  background:#fff;border:1px solid var(--line);border-radius:4px;padding:34px 28px;text-align:center;
+  display:flex;flex-direction:column;align-items:center;gap:12px;position:relative;overflow:hidden;
+}
+.master-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,#dcbc7c,#b98a3c);}
+.master-ava{
+  width:96px;height:96px;border-radius:50%;display:grid;place-items:center;
+  background:linear-gradient(150deg,#2b2418,#17130e);color:var(--gold-l);
+  font-family:var(--font-head);font-size:42px;border:1px solid rgba(185,138,60,.5);
+}
+.master-card h3{font-size:26px;}
+.master-role{font-size:12px;font-weight:800;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);}
+.master-card>p{font-size:14px;color:var(--mut);}
+.master-quote{
+  display:flex;flex-direction:column;gap:16px;justify-content:center;
+}
+.mq{
+  background:var(--cream);border-left:3px solid var(--gold);padding:20px 22px;border-radius:0 4px 4px 0;position:relative;
+}
+.mq .qm{font-family:var(--font-head);font-size:44px;line-height:0;color:var(--gold);position:absolute;top:26px;right:18px;opacity:.35;}
+.mq p{font-family:var(--font-head);font-style:italic;font-size:16.5px;line-height:1.5;color:var(--ink2);}
+.mq span{display:block;margin-top:10px;font-size:12px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--mut);}
+.master-note{margin-top:4px;font-size:14px;color:var(--mut);}
+.master-note b{color:var(--ink);}
+
+/* ============ ОТЗЫВЫ ============ */
+.reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
+.rev-card{
+  background:#fff;border:1px solid var(--line);border-radius:4px;padding:24px;display:flex;flex-direction:column;gap:14px;
+  transition:transform .25s ease,box-shadow .25s ease;
+}
+.rev-card:hover{transform:translateY(-4px);box-shadow:0 20px 44px -26px rgba(23,19,14,.45);}
+.rev-top{display:flex;align-items:center;gap:12px;}
+.rev-ava{
+  width:46px;height:46px;flex:none;border-radius:50%;display:grid;place-items:center;
+  color:#fff;font-weight:800;font-size:16px;letter-spacing:.03em;
+}
+.av-1{background:#b98a3c;} .av-2{background:#5c6b54;} .av-3{background:#8a4b3b;}
+.av-4{background:#3f5c6e;} .av-5{background:#6d5a7a;} .av-6{background:#7c6f5c;}
+.rev-who b{display:block;font-size:15px;font-weight:800;}
+.rev-who span{font-size:12.5px;color:var(--mut);}
+.rev-stars{display:flex;gap:3px;}
+.rev-stars svg{width:15px;height:15px;fill:var(--gold);}
+.rev-card p{font-size:14.5px;color:var(--ink2);flex:1;}
+.rev-src{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--mut);letter-spacing:.06em;text-transform:uppercase;font-weight:700;}
+.rev-src svg{width:14px;height:14px;color:var(--gold);}
+
+/* ============ FAQ ============ */
+.faq-list{max-width:820px;}
+.faq-item{border-bottom:1px solid var(--line);}
+.faq-item:first-child{border-top:1px solid var(--line);}
+.faq-q{
+  width:100%;display:flex;align-items:center;justify-content:space-between;gap:16px;
+  min-height:64px;padding:16px 4px;background:none;border:0;cursor:pointer;text-align:left;
+  font-family:var(--font-head);font-size:19px;color:var(--ink);transition:color .2s;
+}
+.faq-q:hover{color:var(--gold);}
+.faq-q .fx{width:34px;height:34px;flex:none;display:grid;place-items:center;border:1px solid var(--line);border-radius:50%;transition:transform .35s ease,background .25s,border-color .25s;}
+.faq-q .fx svg{width:15px;height:15px;}
+.faq-item.open .faq-q .fx{transform:rotate(45deg);background:var(--gold);border-color:var(--gold);color:#fff;}
+.faq-a{display:grid;grid-template-rows:0fr;transition:grid-template-rows .4s ease;}
+.faq-a>div{overflow:hidden;}
+.faq-a p{padding:0 44px 20px 4px;color:var(--mut);font-size:15px;}
+.faq-item.open .faq-a{grid-template-rows:1fr;}
+
+/* ============ КОНТАКТЫ ============ */
+.contacts-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,4vw,60px);align-items:start;}
+.c-list{display:flex;flex-direction:column;gap:6px;}
+.c-item{display:flex;gap:16px;padding:16px 0;border-bottom:1px solid rgba(220,192,138,.15);}
+.c-item:last-of-type{border-bottom:0;}
+.c-ic{width:44px;height:44px;flex:none;display:grid;place-items:center;border:1px solid rgba(220,192,138,.4);border-radius:4px;color:var(--gold-l);}
+.c-ic svg{width:20px;height:20px;}
+.c-item b{display:block;font-size:12px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-l);margin-bottom:3px;}
+.c-item div p{color:var(--cream);font-size:15.5px;font-weight:600;}
+.c-item div p.sub{color:var(--mut-d);font-size:13.5px;font-weight:500;margin-top:2px;}
+.c-item a{color:var(--cream);text-decoration:none;border-bottom:1px solid rgba(220,192,138,.4);transition:color .2s,border-color .2s;}
+.c-item a:hover{color:var(--gold-l);border-color:var(--gold-l);}
+.contacts-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px;}
+.contacts-media{display:flex;flex-direction:column;gap:14px;}
+.contacts-media figure{margin:0;position:relative;overflow:hidden;border-radius:4px;}
+.contacts-media img{width:100%;object-fit:cover;transition:transform .6s ease;}
+.cm-1 img{aspect-ratio:4/3;}
+.cm-2 img{aspect-ratio:16/9;}
+.contacts-media figure:hover img{transform:scale(1.04);}
+.contacts-media figcaption{position:absolute;left:12px;bottom:12px;background:rgba(23,19,14,.78);color:var(--cream);font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:6px 10px;border-radius:2px;}
+
+/* ============ ФУТЕР ============ */
+.footer{background:#100d09;color:var(--mut-d);padding:44px 0;border-top:1px solid rgba(220,192,138,.14);}
+.foot-in{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:18px;}
+.foot-brand{display:flex;align-items:center;gap:10px;color:var(--cream);font-family:var(--font-head);font-size:17px;letter-spacing:.14em;text-transform:uppercase;}
+.foot-brand em{font-style:normal;color:var(--gold-l);}
+.foot-info{font-size:13px;text-align:right;line-height:1.7;}
+.foot-legal{margin-top:22px;padding-top:18px;border-top:1px solid rgba(220,192,138,.1);display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;font-size:12.5px;color:rgba(245,239,227,.4);}
+
+/* ============ МОДАЛЬНОЕ ОКНО ЗАПИСИ ============ */
+.modal{
+  position:fixed;inset:0;z-index:1500;display:none;align-items:flex-start;justify-content:center;
+  padding:16px;background:rgba(16,13,9,.78);backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);
+  overflow-y:auto;overscroll-behavior:contain;
+}
+.modal.open{display:flex;}
+.modal-card{
+  width:min(820px,100%);margin:auto;background:var(--paper);border-radius:6px;position:relative;
+  box-shadow:0 40px 90px -20px rgba(0,0,0,.6);animation:pop .35s ease;
+  max-height:calc(100svh - 32px);display:flex;flex-direction:column;
+}
+@keyframes pop{from{opacity:0;transform:translateY(22px) scale(.98);}to{opacity:1;transform:none;}}
+.modal-close{
+  position:absolute;top:12px;right:12px;z-index:5;width:44px;height:44px;display:grid;place-items:center;
+  background:var(--cream);border:1px solid var(--line);border-radius:50%;cursor:pointer;transition:background .2s,transform .2s;color:var(--ink);
+}
+.modal-close:hover{background:var(--gold);color:#fff;transform:rotate(90deg);}
+.modal-close svg{width:18px;height:18px;}
+.modal-body{display:grid;grid-template-columns:1.35fr 1fr;overflow:auto;}
+.m-form-side{padding:clamp(24px,4vw,36px);}
+.m-form-side .eyebrow{color:var(--gold);}
+.m-form-side h3{font-size:clamp(24px,3vw,30px);margin:12px 0 6px;}
+.m-form-side .m-sub{font-size:14px;color:var(--mut);margin-bottom:22px;}
+.f-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+.f-field{display:flex;flex-direction:column;gap:6px;}
+.f-field.full{grid-column:1/-1;}
+.f-field label{font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--mut);}
+.f-field label i{color:var(--gold);font-style:normal;}
+.f-field input,.f-field select,.f-field textarea{
+  width:100%;min-height:48px;padding:12px 14px;border:1px solid var(--line);border-radius:3px;background:#fff;
+  font-family:var(--font-body);font-size:15px;color:var(--ink);transition:border-color .2s,box-shadow .2s;
+}
+.f-field textarea{min-height:84px;resize:vertical;}
+.f-field input:focus,.f-field select:focus,.f-field textarea:focus{
+  outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(185,138,60,.18);
+}
+.m-aside{
+  background:var(--ink);color:var(--cream);padding:clamp(24px,4vw,36px);
+  display:flex;flex-direction:column;gap:18px;border-radius:0 6px 6px 0;
+}
+.m-aside b.lab{font-size:11px;font-weight:800;letter-spacing:.24em;text-transform:uppercase;color:var(--gold-l);}
+.m-phone{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--cream);font-family:var(--font-head);font-size:24px;transition:color .2s;}
+.m-phone:hover{color:var(--gold-l);}
+.m-phone svg{width:20px;height:20px;color:var(--gold-l);flex:none;}
+.m-aside ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:12px;}
+.m-aside li{display:flex;gap:10px;align-items:flex-start;font-size:13.5px;color:var(--mut-d);line-height:1.5;}
+.m-aside li svg{width:16px;height:16px;color:var(--gold-l);flex:none;margin-top:2px;}
+.m-success{padding:clamp(36px,6vw,56px);text-align:center;display:flex;flex-direction:column;align-items:center;gap:16px;}
+.m-success .ok{width:76px;height:76px;border-radius:50%;display:grid;place-items:center;background:rgba(185,138,60,.14);border:1px solid var(--gold);}
+.m-success .ok svg{width:34px;height:34px;color:var(--gold);}
+.m-success h3{font-size:28px;}
+.m-success p{color:var(--mut);max-width:44ch;}
+
+/* ============ АДАПТИВ ============ */
+@media (max-width:1080px){
+  .works-grid{grid-template-columns:repeat(3,1fr);}
+  .nav-links a{padding:8px 9px;font-size:13px;}
+}
+@media (max-width:960px){
+  .nav-links,.head-phone{display:none;}
+  .burger{display:block;}
+  .hero-body{grid-template-columns:1fr;padding-top:26px;}
+  .hero-visual{display:none;}
+  .hero-mvis{display:block;}
+  .about-grid{grid-template-columns:1fr;}
+  .services-grid{grid-template-columns:1fr;}
+  .services-photo{position:static;max-width:560px;}
+  .services-photo img{aspect-ratio:auto;height:auto;}
+  .master-grid{grid-template-columns:1fr;}
+  .contacts-grid{grid-template-columns:1fr;}
+  .modal-body{grid-template-columns:1fr;}
+  .m-aside{border-radius:0;}
+}
+@media (max-width:860px){
+  .reviews-grid{grid-template-columns:repeat(2,1fr);}
+}
+@media (max-width:720px){
+  .srv-cats{grid-template-columns:1fr;}
+  .perks{grid-template-columns:1fr;}
+  .about-media{grid-template-columns:1fr 1fr;}
+  .am-2{margin-top:22px;}
+  .am-3{margin-top:-22px;}
+}
+@media (max-width:620px){
+ .services-cta .btn{flex:1 1 100%;min-width:0;padding-inline:16px!important;max-width:100%}
+ .services-cta{width:100%}
+ .hero-cta{width:100%;max-width:100%}
+ .hero-cta .btn{flex:1 1 100%;min-width:0;padding:12px 16px}
+ .hero-cta .btn svg{flex:none}
+  .works-grid{grid-template-columns:repeat(2,1fr);gap:12px;}
+  .f-grid{grid-template-columns:1fr;}
+  .reviews-grid{grid-template-columns:1fr;}
+  .foot-in{flex-direction:column;text-align:center;}
+  .foot-info{text-align:center;}
+  .foot-legal{justify-content:center;text-align:center;}
+  .head-in{min-height:64px;}
+  .logo-txt{font-size:16px;}
+  section{scroll-margin-top:74px;}
+}
+@media (max-width:420px){
+  .about-media{grid-template-columns:1fr;}
+  .am-2,.am-3{margin-top:0;}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important;}
+  html{scroll-behavior:auto;}
+  .reveal{opacity:1;transform:none;}
+}
+/* ---------- ПЛАШКА ALTAVALTA ---------- */
+body{padding-top:42px}
+.demo-ribbon{position:fixed;top:0;left:0;right:0;z-index:1300;display:flex;align-items:center;justify-content:center;gap:16px;background:#221019;border-bottom:1px solid rgba(201,164,104,.35);padding:8px 14px}
+.demo-label{display:flex;align-items:center;gap:8px;color:#fdf3ea;font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:600}
+.demo-label i{width:5px;height:5px;border-radius:50%;background:#c99a6c;display:inline-block}
+.demo-label .dl-sub{opacity:.75;font-weight:400}
+.demo-label .dl-love{color:#c99a6c}
+.demo-remove{margin-left:6px;background:transparent;border:1px solid rgba(201,164,104,.6);color:#fdf3ea;padding:6px 14px;border-radius:999px;font-size:12px;cursor:pointer;transition:all .25s}
+.demo-remove:hover{background:#c99a6c;color:#221019}
+@media (max-width:560px){.demo-ribbon{padding:8px 10px;gap:8px}.demo-label{font-size:10.5px;letter-spacing:.12em}.demo-remove{padding:5px 10px;font-size:11px}}
+body.demo-off .demo-ribbon{display:none} body.demo-off{padding-top:0} body.demo-off .site-head{top:0}
+/* ---------- ПОДПИСЬ ALTAVALTA ---------- */
+.footer-brand{display:flex;align-items:center;justify-content:center;gap:10px;margin-top:16px;padding-top:14px;border-top:1px solid rgba(201,164,104,.22);flex-wrap:wrap}
+.brand-made{color:#7d8a74;font-family:'Jost',sans-serif;font-size:9.5px;font-weight:500;letter-spacing:.24em;text-transform:lowercase}
+.brand-link{display:inline-flex;align-items:center;text-decoration:none;transition:opacity .3s}
+.brand-link:hover{opacity:.8}
+.sig-name{display:inline-flex;color:#d8d2c2;font-family:'Jost',sans-serif;font-size:12px;font-weight:700;gap:.08em;text-transform:uppercase;line-height:1}
+.sig-name b{font-weight:inherit}
+.brand-core{color:#c99a6c;animation:v-pulse 2s ease-in-out infinite}
+@keyframes v-pulse{0%,62%{color:#c99a6c;text-shadow:none}74%{color:#f5d9a8;text-shadow:0 0 10px rgba(245,217,168,.75)}85%{color:#f7e3b5;text-shadow:0 0 12px rgba(247,227,181,.9)}100%{color:#c99a6c}}
+.hero-mvis{display:none;width:100%;border-radius:18px;overflow:hidden;margin-top:20px;box-shadow:0 24px 50px -30px rgba(34,25,19,.45)}.hero-mvis img{width:100%;height:100%;object-fit:cover;display:block}
+
+/* при снятии метки hero без плашки */
+body.demo-off .hero{padding-top:72px}
+@media (max-width:960px){body.demo-off .hero{padding-top:76px}}
+/* ==== мобильный hero-visual (фото перед кнопками) ==== */
+.hero-visual--m{display:none}
+@media (max-width:960px){
+  .hero-visual--m{display:block;width:100%;max-width:420px;margin:32px auto 32px}
+  .hero-visual--m .hero-frame{width:100%}
+  .hero-visual--m .hero-frame .ph{aspect-ratio:4/3}
+  .hero-visual--m .hero-frame::before{transform:translate(9px,9px)}
+  .hero-visual--m .hero-quote{position:absolute;left:12px;bottom:12px;max-width:80%;padding:9px 11px;box-shadow:0 12px 26px -14px rgba(0,0,0,.6)}
+  .hero-visual--m .hero-quote p{font-size:13px}
+  .hero-visual--m .hero-quote span{font-size:10px}
+}
+/* ==== О салоне: фото на мобилке крупно, в одну колонку ==== */
+@media (max-width:640px){
+  .about-media{grid-template-columns:1fr;gap:18px}
+  .am-2{margin-top:0!important}
+  .am-3{margin-top:0!important}
+}
+/* ФИКС шапка: hero получает отступ под фиксированную шапку (42px плашка + 72px шапка) */
+.hero{padding-top:calc(42px + 72px)}
+@media (max-width:960px){
+  .hero{padding-top:76px}
+}
+/* ФИКС О салоне: masonry вместо grid с костылями */
+.about-media{display:block;columns:2;column-gap:16px}
+.about-media .am{break-inside:avoid;margin:0 0 16px!important;aspect-ratio:auto}
+.about-media .am img{aspect-ratio:auto;height:auto}
+/* ==== MASONRY: .works-grid ==== */
+.works-grid{display:block;columns:3;column-gap:16px}
+.works-grid .tile{break-inside:avoid;margin:0 0 16px!important;width:100%;aspect-ratio:auto!important}
+.works-grid .tile-img img{aspect-ratio:auto!important;height:auto!important;object-fit:cover;width:100%}
+@media (max-width:960px){.works-grid{columns:2}}
+@media (max-width:640px){.works-grid{columns:2}}
+
+/* УСЛУГИ: фото в естественных пропорциях, без растяжения */
+.services-photo img{aspect-ratio:auto!important;height:auto!important;object-fit:contain}
+
+/* услуги: на мобилке фото компактное (не растягивает секцию) */
+@media (max-width:960px){
+  .services-photo{max-width:100%}
+  .services-photo img{max-height:380px;width:100%;object-fit:cover;object-position:center}
+}
+/* скрытые блоки всегда скрыты (не даём display перебить hidden) */
+[hidden]{display:none!important}
+
+/* ===== ДЕМО-ПЛАШКА: стандарт (над шапкой, шапка не наезжает на текст) ===== */
+.demo-ribbon{position:fixed!important;top:0!important;left:0!important;right:0!important;z-index:1300!important;box-sizing:border-box!important}
+body{padding-top:34px!important}
+body.demo-off{padding-top:0!important}
+body.demo-off .demo-ribbon{display:none!important}
+.site-head{top:34px!important}
+body.demo-off .site-head{top:0!important}
+
+/* ===== ПЛАШКА-КОМПАКТ: одна строка, ниже, тоньше (стандарт 03.09) ===== */
+.demo-ribbon{height:34px!important;min-height:34px!important;padding:0 12px!important;gap:10px!important;border-bottom-width:1px!important}
+.demo-label{gap:6px!important;font-size:11px!important;letter-spacing:.12em!important}
+.demo-label i{width:4px!important;height:4px!important}
+.demo-remove{margin-left:0!important;padding:3px 9px!important;font-size:10.5px!important;line-height:1.4!important;border-radius:999px!important}
+@media(max-width:560px){
+ .demo-label{font-size:9px!important;letter-spacing:.09em!important;gap:5px!important}
+ .demo-ribbon{gap:7px!important;padding:0 8px!important}
+ .demo-remove{padding:2px 7px!important;font-size:9px!important}
+ .demo-label b,.demo-label .dl-sub,.demo-label .dl-love{white-space:nowrap!important}
+}
+/* ===== ЛЕНТА-СТАНДАРТ: бегущая строка «полотно в рамке» ===== */
+.marquee{
+  border:1px solid rgba(80,45,8,.40)!important;
+  border-radius:10px!important;
+  padding:9px 0!important;
+  overflow:hidden!important;
+}
+.marquee *{font-size:clamp(11px,2.9vw,13px)!important;letter-spacing:.16em!important;line-height:1.25!important;text-transform:uppercase!important}
+.marquee .marquee-track{padding-top:0!important;padding-bottom:0!important}
+.marquee .ticker-track{padding-top:0!important;padding-bottom:0!important}
+.marquee .tape-track{padding-top:0!important;padding-bottom:0!important}
+.marquee .mq-track{padding-top:0!important;padding-bottom:0!important}
+.marquee .mq-t{padding-top:0!important;padding-bottom:0!important}
+.marquee .marquee__track{padding-top:0!important;padding-bottom:0!important}
+.marquee .ticker__track{padding-top:0!important;padding-bottom:0!important}
+.marquee .tape__track{padding-top:0!important;padding-bottom:0!important}
+.marquee .marquee-track ul{padding-top:0!important;padding-bottom:0!important}
+.marquee .mq-set{padding-top:0!important;padding-bottom:0!important}
+.marquee .mq-group{padding-top:0!important;padding-bottom:0!important}
+.marquee .marquee__group{padding-top:0!important;padding-bottom:0!important}
+.marquee .mq-seq{padding-top:0!important;padding-bottom:0!important}
+.marquee .marquee-group{padding-top:0!important;padding-bottom:0!important}
+.marquee .ticker-group{padding-top:0!important;padding-bottom:0!important}
+.marquee .tape-group{padding-top:0!important;padding-bottom:0!important}
+.marquee .ticker-half{padding-top:0!important;padding-bottom:0!important}
+.marquee .marquee__list{padding-top:0!important;padding-bottom:0!important}
+.marquee .ticker-clip{padding-top:0!important;padding-bottom:0!important}
+.marquee .mq-item{padding-top:0!important;padding-bottom:0!important}
+.marquee .ticker-item{padding-top:0!important;padding-bottom:0!important}
+.marquee .tape-item{padding-top:0!important;padding-bottom:0!important}
+.marquee .marquee__item{padding-top:0!important;padding-bottom:0!important}
+.marquee .mq-i{padding-top:0!important;padding-bottom:0!important}
+.marquee ul{padding-top:0!important;padding-bottom:0!important}
+.marquee li{padding-top:0!important;padding-bottom:0!important}
+.marquee span{padding-top:0!important;padding-bottom:0!important}
+@media (max-width:380px){
+  .marquee *{font-size:10.5px!important;letter-spacing:.12em!important}
+}
+
+
+/* ЛЕНТА-ШИРИНА: полотно в рамках родителя (не раздувает экран) */
+.marquee{width:100%!important;max-width:100%!important;min-width:0!important;box-sizing:border-box!important}
+
+
+/* ПОДПИСИ-СТАНДАРТ: подпись под фото, в потоке (как simple) */
+#works .tile{position:relative}
+#works .tile figcaption{position:static!important;inset:auto!important;left:auto!important;right:auto!important;bottom:auto!important;top:auto!important;
+  background:none!important;backdrop-filter:none!important;border:none!important;box-shadow:none!important;
+  transform:none!important;opacity:1!important;padding:12px 14px 14px!important;
+  display:block!important;border-top:1px solid rgba(128,128,128,.25)!important;
+  font-size:12.5px!important;line-height:1.4!important;color:inherit!important;text-transform:none!important;letter-spacing:.02em!important}
+#works .tile figcaption b,#works .tile figcaption strong{display:block;font-size:14px!important;font-weight:600!important;color:inherit!important;margin-top:2px}
+#works .tile figcaption span,#works .tile figcaption small{display:inline-block;font-size:10.5px!important;font-weight:700!important;letter-spacing:.14em!important;text-transform:uppercase!important;opacity:.75!important}
+</style>
+</head>
+<body>
+<div class="demo-ribbon" id="demoRibbon" role="note">
+  <span class="demo-label"><b>ДЕМО-ВЕРСИЯ</b><i></i><span class="dl-sub">создано</span><b class="dl-love">с любовью</b></span>
+  <button type="button" class="demo-remove" id="demoRemove">Убрать метку</button>
+</div>
+
+<!-- ================= ШАПКА ================= -->
+<header class="site-head">
+  <div class="wrap head-in">
+    <a class="logo" href="#top" aria-label="Студия Люкс - на главную">
+      <span class="logo-mark"><span>L</span></span>
+      <span class="logo-txt">Studio <em>Lux</em></span>
+    </a>
+    <nav class="nav-links" aria-label="Основная навигация">
+      <a href="#about">О салоне</a>
+      <a href="#services">Услуги</a>
+      <a href="#works">Работы</a>
+      <a href="#master">Мастера</a>
+      <a href="#reviews">Отзывы</a>
+      <a href="#contacts">Контакты</a>
+    </nav>
+    <div class="head-actions">
+      <a class="head-phone" href="tel:+74012933555">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.13.96.36 1.9.7 2.8a2 2 0 0 1-.45 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.45c.9.34 1.84.57 2.8.7A2 2 0 0 1 22 16.9z"/></svg>
+        +7 (4012) 93-35-55
+      </a>
+      <button class="btn btn-gold btn-sm" data-book>Записаться</button>
+      <button class="burger" id="menuBtn" aria-label="Открыть меню" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- мобильное меню -->
+<nav class="mobile-menu" id="mobileMenu" aria-label="Мобильное меню">
+  <a class="m-link" href="#about">О салоне <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+  <a class="m-link" href="#services">Услуги и цены <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+  <a class="m-link" href="#works">Наши работы <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+  <a class="m-link" href="#master">Мастера <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+  <a class="m-link" href="#reviews">Отзывы <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+  <a class="m-link" href="#contacts">Контакты <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+  <div class="m-foot">
+    <a class="m-phone" href="tel:+74012933555">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.13.96.36 1.9.7 2.8a2 2 0 0 1-.45 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.45c.9.34 1.84.57 2.8.7A2 2 0 0 1 22 16.9z"/></svg>
+      +7 (4012) 93-35-55
+    </a>
+    <p class="m-hours">Пн–Сб 09:00–21:00 · Вс 10:00–18:00</p>
+    <button class="btn btn-gold btn-block" data-book>Записаться онлайн</button>
+  </div>
+</nav>
+
+<!-- ================= ПЕРВЫЙ ЭКРАН ================= -->
+<section class="hero" id="top">
+  <div class="wrap hero-body">
+    <div class="hero-txt">
+      <p class="eyebrow">Салон красоты · Калининград</p>
+      <h1>«Студия Люкс» - место, куда <em>возвращаются</em></h1>
+      <p class="hero-sub">Стрижки, окрашивание, косметология, массаж и маникюр в самом сердце города. Уютная атмосфера, внимательные мастера и кофе для каждого гостя.</p>
+      
+        <div class="hero-visual hero-visual--m">
+          <div class="hero-frame">
+            <div class="ph">
+              <img src="studio_lux_photo09.jpg" width="960" height="720" alt="Вход в салон красоты Студия Люкс с вывеской" loading="lazy">
+            </div>
+            <div class="hero-quote">
+              <p>«Пафосное название вполне оправдано»</p>
+              <span>Из отзывов на Яндекс Картах</span>
+            </div>
+          </div>
+        </div>
+
+      <div class="hero-cta">
+        <button class="btn btn-gold" data-book>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M8 3v4M16 3v4M3 11h18"/></svg>
+          Записаться онлайн
+        </button>
+        <a class="btn btn-ghost" href="#services">Услуги и цены</a>
+      </div>
+      <div class="hero-facts">
+        <span class="chip">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>
+          Пн–Сб 09:00–21:00, Вс 10:00–18:00
+        </span>
+        <span class="chip">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-5.6-7-11a7 7 0 0 1 14 0c0 5.4-7 11-7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>
+          ул. Карла Маркса, 30 · 1 этаж
+        </span>
+        <span class="chip">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l1.6-4.8A2 2 0 0 1 7.5 6h9a2 2 0 0 1 1.9 1.2L20 12v6a1 1 0 0 1-1 1h-1.4a1 1 0 0 1-1-1v-1h-9.2v1a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-6z"/><circle cx="8" cy="14.6" r="1.2"/><circle cx="16" cy="14.6" r="1.2"/></svg>
+          Парковка во дворе
+        </span>
+        <span class="chip">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9h13v6a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4V9z"/><path d="M17 10h1.6a2.4 2.4 0 0 1 0 4.8H17M7.5 3.5v2M11 3v2.8M14.5 3.5v2"/></svg>
+          Кофе гостям
+        </span>
+        <span class="chip">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.26 6.6.56-5 4.4 1.5 6.48L12 16.8 5.99 19.7l1.5-6.48-5-4.4 6.6-.56z"/></svg>
+          11 отзывов на Яндекс Картах
+        </span>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-frame">
+        <div class="ph">
+          <img src="studio_lux_photo09.jpg" width="960" height="720" alt="Вход в салон красоты Студия Люкс с вывеской">
+        </div>
+        <div class="hero-quote">
+          <p>«Пафосное название вполне оправдано»</p>
+          <span>Из отзывов на Яндекс Картах</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="wrap marquee-zone">
+    <div class="marquee" aria-label="Направления работы салона">
+      <div class="marquee-track">
+        <ul>
+          <li>Стрижки <svg viewBox="0 0 10 10"><rect x="2" y="2" width="6" height="6" transform="rotate(45 5 5)"/></svg></li>
+          <li>Окрашивание <svg viewBox="0 0 10 10"><rect x="2" y="2" width="6" height="6" transform="rotate(45 5 5)"/></svg></li>
+          <li>Укладки <svg viewBox="0 0 10 10"><rect x="2" y="2" width="6" height="6" transform="rotate(45 5 5)"/></svg></li>
+          <li>Косметология <svg viewBox="0 0 10 10"><rect x="2" y="2" width="6" height="6" transform="rotate(45 5 5)"/></svg></li>
+          <li>Массаж <svg viewBox="0 0 10 10"><rect x="2" y="2" width="6" height="6" transform="rotate(45 5 5)"/></svg></li>
+          <li>Маникюр <svg viewBox="0 0 10 10"><rect x="2" y="2" width="6" height="6" transform="rotate(45 5 5)"/></svg></li>
+          <li>Карла Маркса, 30 <svg viewBox="0 0 10 10"><rect x="2" y="2" width="6" height="6" transform="rotate(45 5 5)"/></svg></li>
+          <li>Парковка во дворе <svg viewBox="0 0 10 10"><rect x="2" y="2" width="6" height="6" transform="rotate(45 5 5)"/></svg></li>
+          <li>Кофе каждому гостю <svg viewBox="0 0 10 10"><rect x="2" y="2" width="6" height="6" transform="rotate(45 5 5)"/></svg></li>
+        </ul>
+        <ul aria-hidden="true">
+          <li>Стрижки <svg viewBox="0 0 10 10"><rect x="2" y="2" width="6" height="6" transform="rotate(45 5 5)"/></svg></li>
+          <li>Окрашивание <svg viewBox="0 0 10 10"><rect x="2" y="2" width="6" height="6" transform="rotate(45 5 5)"/></svg></li>
+          <li>Укладки <svg viewBox="0 0 10 10"><rect x="2" y="2" width="6" height="6" transform="rotate(45 5 5)"/></svg></li>
+          <li>Косметология <svg viewBox="0 0 10 10"><rect x="2" y="2" width="6" height="6" transform="rotate(45 5 5)"/></svg></li>
+          <li>Массаж <svg viewBox="0 0 10 10"><rect x="2" y="2" width="6" height="6" transform="rotate(45 5 5)"/></svg></li>
+          <li>Маникюр <svg viewBox="0 0 10 10"><rect x="2" y="2" width="6" height="6" transform="rotate(45 5 5)"/></svg></li>
+          <li>Карла Маркса, 30 <svg viewBox="0 0 10 10"><rect x="2" y="2" width="6" height="6" transform="rotate(45 5 5)"/></svg></li>
+          <li>Парковка во дворе <svg viewBox="0 0 10 10"><rect x="2" y="2" width="6" height="6" transform="rotate(45 5 5)"/></svg></li>
+          <li>Кофе каждому гостю <svg viewBox="0 0 10 10"><rect x="2" y="2" width="6" height="6" transform="rotate(45 5 5)"/></svg></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= О САЛОНЕ ================= -->
+<section class="sec" id="about">
+  <div class="wrap">
+    <div class="about-grid">
+      <div class="about-txt reveal">
+        <div class="sec-head" style="margin-bottom:24px;">
+          <p class="eyebrow">О салоне</p>
+          <h2>Камерный салон с домашней атмосферой - близко к центру города</h2>
+        </div>
+        <p>«Студия Люкс» - небольшой салон на первом этаже здания на улице Карла Маркса. Здесь нет суеты больших сетей: <b>внимательные мастера, спокойный темп и по-домашнему тёплая атмосфера</b>, о которой пишут в отзывах.</p>
+        <p>Под одной крышей собрали всё для ухода за собой: парикмахерский зал с мойкой, кабинет косметолога, массаж на втором этаже и зону маникюра. Гостям всегда предложат кофе, а для автомобилистов работает <b>парковка во дворе</b>.</p>
+        <div class="perks">
+          <div class="perk">
+            <span class="perk-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="2.6"/><circle cx="6" cy="18" r="2.6"/><path d="M8.3 7.8 20 19.5M8.3 16.2 20 4.5"/></svg></span>
+            <div><h3>Мастера-профессионалы</h3><p>«Вежливые мастера, профессионалы высшего класса»</p></div>
+          </div>
+          <div class="perk">
+            <span class="perk-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11l8-7 8 7"/><path d="M6 9.5V20h12V9.5"/><path d="M10 20v-5h4v5"/></svg></span>
+            <div><h3>Домашняя атмосфера</h3><p>Маленький уютный салон, куда хочется возвращаться</p></div>
+          </div>
+          <div class="perk">
+            <span class="perk-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9h13v6a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4V9z"/><path d="M17 10h1.6a2.4 2.4 0 0 1 0 4.8H17M7.5 3.5v2M11 3v2.8M14.5 3.5v2"/></svg></span>
+            <div><h3>Кофе каждому гостю</h3><p>«Всегда предложат кофе» - из отзывов клиентов</p></div>
+          </div>
+          <div class="perk">
+            <span class="perk-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M7 6.5h7.5a2.75 2.75 0 0 1 0 5.5H7M7 12h8.5a2.75 2.75 0 0 1 0 5.5H7"/></svg></span>
+            <div><h3>Умеренные цены</h3><p>«Цены умеренные», «цена соответствует уровню»</p></div>
+          </div>
+          <div class="perk">
+            <span class="perk-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l1.6-4.8A2 2 0 0 1 7.5 6h9a2 2 0 0 1 1.9 1.2L20 12v6a1 1 0 0 1-1 1h-1.4a1 1 0 0 1-1-1v-1h-9.2v1a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-6z"/><circle cx="8" cy="14.6" r="1.2"/><circle cx="16" cy="14.6" r="1.2"/></svg></span>
+            <div><h3>Парковка во дворе</h3><p>Не нужно искать место - заезжайте прямо во двор</p></div>
+          </div>
+          <div class="perk">
+            <span class="perk-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4c1.9 2.1 1.9 5.4 0 7.5-1.9-2.1-1.9-5.4 0-7.5z"/><path d="M5.5 9c2.6.4 4.8 2.3 5.6 5-2.7-.3-4.9-2.2-5.6-5zM18.5 9c-2.6.4-4.8 2.3-5.6 5 2.7-.3 4.9-2.2 5.6-5z"/><path d="M4 15c1.6 3.4 4.6 5 8 5s6.4-1.6 8-5"/></svg></span>
+            <div><h3>Массаж на 2-м этаже</h3><p>Отдельный массажный кабинет над залом салона</p></div>
+          </div>
+        </div>
+      </div>
+      <div class="about-media reveal">
+        <figure class="am am-1"><img src="studio_lux_photo12.jpg" width="960" height="1280" alt="Интерьер салона: лестница на второй этаж, стойка регистрации и стеллажи с косметикой" loading="lazy"><figcaption class="am-cap">Ресепшн и лестница на массаж</figcaption></figure>
+        <figure class="am am-2"><img src="studio_lux_photo10.jpg" width="960" height="720" alt="Зона маникюра с креслами, лаками и хрустальной люстрой на сводчатом потолке" loading="lazy"><figcaption class="am-cap">Зона маникюра</figcaption></figure>
+        <figure class="am am-3"><img src="studio_lux_photo13.jpg" width="960" height="1280" alt="Парикмахерское место с зеркалом и инструментами" loading="lazy"><figcaption class="am-cap">Парикмахерский зал</figcaption></figure>
+        <figure class="am am-4"><img src="studio_lux_photo17.jpg" width="960" height="1280" alt="Клиентка в кресле парикмахерского зала в процессе процедуры" loading="lazy"><figcaption class="am-cap">Процесс работы</figcaption></figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= УСЛУГИ И ЦЕНЫ ================= -->
+<section class="sec sec-alt" id="services">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Услуги и цены</p>
+      <h2>Четыре направления - под одной крышей</h2>
+      <p class="lead">Нажмите на любую услугу, чтобы сразу открыть запись. Точную стоимость администратор назовёт при записи.</p>
+    </div>
+    <div class="services-grid">
+      <figure class="services-photo reveal">
+        <img src="studio_lux_photo02.jpg" width="960" height="1280" alt="Парикмахерский зал: мойка для волос и кресла клиентов" loading="lazy">
+        
+      </figure>
+      <div class="reveal">
+        <div class="srv-cats">
+          <div class="srv-cat">
+            <div class="srv-cat-head">
+              <span class="perk-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="2.6"/><circle cx="6" cy="18" r="2.6"/><path d="M8.3 7.8 20 19.5M8.3 16.2 20 4.5"/></svg></span>
+              <h3>Волосы</h3>
+            </div>
+            <div class="srv-rows">
+              <button class="srv-row" data-book data-service="Женская стрижка"><span class="srv-name">Женская стрижка</span><span class="srv-dots"></span><span class="srv-price">по записи</span></button>
+              <button class="srv-row" data-book data-service="Мужская стрижка"><span class="srv-name">Мужская стрижка</span><span class="srv-dots"></span><span class="srv-price">по записи</span></button>
+              <button class="srv-row" data-book data-service="Окрашивание"><span class="srv-name">Окрашивание</span><span class="srv-dots"></span><span class="srv-price">по записи</span></button>
+              <button class="srv-row" data-book data-service="Укладка"><span class="srv-name">Укладка</span><span class="srv-dots"></span><span class="srv-price">по записи</span></button>
+              <button class="srv-row" data-book data-service="Уход за волосами"><span class="srv-name">Уход за волосами</span><span class="srv-dots"></span><span class="srv-price">по записи</span></button>
+            </div>
+            <button class="btn btn-line btn-sm" data-book data-service="Женская стрижка">Записаться</button>
+          </div>
+          <div class="srv-cat">
+            <div class="srv-cat-head">
+              <span class="perk-ic"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8zM18.5 15l.9 2.6L22 18.5l-2.6.9-.9 2.6-.9-2.6-2.6-.9 2.6-.9z"/></svg></span>
+              <h3>Косметология</h3>
+            </div>
+            <div class="srv-rows">
+              <button class="srv-row" data-book data-service="Консультация косметолога"><span class="srv-name">Консультация косметолога</span><span class="srv-dots"></span><span class="srv-price">по записи</span></button>
+              <button class="srv-row" data-book data-service="Anti-age процедуры"><span class="srv-name">Anti-age процедуры</span><span class="srv-dots"></span><span class="srv-price">по записи</span></button>
+              <button class="srv-row" data-book data-service="Аппаратная косметология, LPG"><span class="srv-name">Аппаратная косметология, LPG</span><span class="srv-dots"></span><span class="srv-price">по записи</span></button>
+              <button class="srv-row" data-book data-service="Инъекционные процедуры"><span class="srv-name">Инъекционные процедуры</span><span class="srv-dots"></span><span class="srv-price">по записи</span></button>
+              <button class="srv-row" data-book data-service="Дарсонвализация"><span class="srv-name">Дарсонвализация</span><span class="srv-dots"></span><span class="srv-price">по записи</span></button>
+            </div>
+            <button class="btn btn-line btn-sm" data-book data-service="Консультация косметолога">Записаться</button>
+          </div>
+          <div class="srv-cat">
+            <div class="srv-cat-head">
+              <span class="perk-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4c1.9 2.1 1.9 5.4 0 7.5-1.9-2.1-1.9-5.4 0-7.5z"/><path d="M5.5 9c2.6.4 4.8 2.3 5.6 5-2.7-.3-4.9-2.2-5.6-5zM18.5 9c-2.6.4-4.8 2.3-5.6 5 2.7-.3 4.9-2.2 5.6-5z"/><path d="M4 15c1.6 3.4 4.6 5 8 5s6.4-1.6 8-5"/></svg></span>
+              <h3>Массаж</h3>
+            </div>
+            <div class="srv-rows">
+              <button class="srv-row" data-book data-service="Массаж"><span class="srv-name">Массаж (кабинет на 2-м этаже)</span><span class="srv-dots"></span><span class="srv-price">по записи</span></button>
+            </div>
+            <button class="btn btn-line btn-sm" data-book data-service="Массаж">Записаться</button>
+          </div>
+          <div class="srv-cat">
+            <div class="srv-cat-head">
+              <span class="perk-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="10" width="6" height="10" rx="1.6"/><path d="M10.5 10V6.5h3V10M10 6.5V3.5h4v3"/></svg></span>
+              <h3>Ногтевой сервис</h3>
+            </div>
+            <div class="srv-rows">
+              <button class="srv-row" data-book data-service="Маникюр"><span class="srv-name">Маникюр</span><span class="srv-dots"></span><span class="srv-price">по записи</span></button>
+            </div>
+            <button class="btn btn-line btn-sm" data-book data-service="Маникюр">Записаться</button>
+          </div>
+        </div>
+        <div class="price-note">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16.4v.2"/></svg>
+          <p><b>Стоимость - по записи.</b> Клиенты отмечают умеренные цены: «цена соответствует уровню». Итоговая стоимость зависит от длины и густоты волос, объёма и сложности процедуры - администратор назовёт точную цену при записи.</p>
+        </div>
+      </div>
+    </div>
+    <div class="services-cta reveal">
+      <button class="btn btn-gold" data-book style="padding-inline:44px;">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M8 3v4M16 3v4M3 11h18"/></svg>
+        Записаться в «Студию Люкс»
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ================= РАБОТЫ ================= -->
+<section class="sec sec-dark" id="works">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Наши работы</p>
+      <h2>Результаты, которые говорят сами за себя</h2>
+      <p class="lead">Стрижки, окрашивания и укладки мастеров салона. Каждая работа подписана - так вы понимаете, что именно сделано.</p>
+    </div>
+    <div class="works-grid">
+      <figure class="tile reveal">
+        <div class="tile-img"><img src="studio_lux_photo04.jpg" width="949" height="1280" alt="Женщина с короткой стрижкой на светлых волосах" loading="lazy"></div>
+        <figcaption><span class="tile-tag">Стрижка</span><span class="tile-name">Светлый блонд - короткая форма</span></figcaption>
+      </figure>
+      <figure class="tile reveal">
+        <div class="tile-img"><img src="studio_lux_photo08.jpg" width="960" height="1280" alt="Окрашивание волос в тёмно-коричневый цвет со светлыми бликами, вид сзади" loading="lazy"></div>
+        <figcaption><span class="tile-tag">Окрашивание</span><span class="tile-name">Глубокий каштан со светлыми бликами</span></figcaption>
+      </figure>
+      <figure class="tile reveal">
+        <div class="tile-img"><img src="studio_lux_photo07.jpg" width="764" height="874" alt="Женщина с длинными волнистыми светлыми волосами" loading="lazy"></div>
+        <figcaption><span class="tile-tag">Укладка</span><span class="tile-name">Длинные волны на блонде</span></figcaption>
+      </figure>
+      <div class="tile tile-cta reveal">
+        <h3>Хотите так же?</h3>
+        <p>Подберём форму и цвет под ваши волосы - на бесплатной консультации перед процедурой.</p>
+        <button class="btn btn-dark" data-book>Записаться</button>
+      </div>
+      <figure class="tile reveal">
+        <div class="tile-img"><img src="studio_lux_photo05.jpg" width="1017" height="1280" alt="Женщина со строгой укладкой на светлых волосах" loading="lazy"></div>
+        <figcaption><span class="tile-tag">Укладка</span><span class="tile-name">Строгая укладка - элегантный силуэт</span></figcaption>
+      </figure>
+      <figure class="tile reveal">
+        <div class="tile-img"><img src="studio_lux_photo14.jpg" width="960" height="1280" alt="Мужчина с короткой стрижкой на тёмных волосах" loading="lazy"></div>
+        <figcaption><span class="tile-tag">Мужская стрижка</span><span class="tile-name">Мужская классика - чёткая форма</span></figcaption>
+      </figure>
+      <figure class="tile reveal">
+        <div class="tile-img"><img src="studio_lux_photo18.jpg" width="1019" height="1280" alt="Женщина с длинными светлыми волосами, завитыми в волны" loading="lazy"></div>
+        <figcaption><span class="tile-tag">Укладка</span><span class="tile-name">Голливудская волна на длинных волосах</span></figcaption>
+      </figure>
+      <figure class="tile reveal">
+        <div class="tile-img"><img src="studio_lux_photo03.jpg" width="960" height="1280" alt="Короткая стрижка на светлых волосах, вид сзади" loading="lazy"></div>
+        <figcaption><span class="tile-tag">Стрижка</span><span class="tile-name">Короткий блонд - чистая линия</span></figcaption>
+      </figure>
+      <figure class="tile reveal">
+        <div class="tile-img"><img src="studio_lux_photo19.jpg" width="864" height="1280" alt="Женщина с длинными светлыми волосами, уложенными в мягкие волны" loading="lazy"></div>
+        <figcaption><span class="tile-tag">Укладка</span><span class="tile-name">Естественные волны на длинных волосах</span></figcaption>
+      </figure>
+      <figure class="tile reveal">
+        <div class="tile-img"><img src="studio_lux_photo21.jpg" width="480" height="640" alt="Мужчина с короткой стрижкой и оформленной бородой" loading="lazy"></div>
+        <figcaption><span class="tile-tag">Мужской зал</span><span class="tile-name">Короткая стрижка и форма бороды</span></figcaption>
+      </figure>
+      <figure class="tile reveal">
+        <div class="tile-img"><img src="studio_lux_photo15.jpg" width="960" height="1280" alt="Длинные светлые волосы, гладко уложенные" loading="lazy"></div>
+        <figcaption><span class="tile-tag">Уход</span><span class="tile-name">Гладкий блонд - уход и блеск</span></figcaption>
+      </figure>
+      <div class="tile tile-info reveal">
+        <h3>Направления салона</h3>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>Волосы: стрижки, окрашивание, укладки</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>Лицо: косметология и уход</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>Тело: массаж на втором этаже</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>Ногти: маникюр с покрытием</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= МАСТЕРА ================= -->
+<section class="sec" id="master">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Мастера</p>
+      <h2>Люди, к которым идут по имени</h2>
+    </div>
+    <div class="master-grid">
+      <div class="master-card reveal">
+        <span class="master-ava">С</span>
+        <h3>Светлана</h3>
+        <span class="master-role">Косметолог</span>
+        <p>Мастер, к которому клиенты ходят регулярно и возвращаются снова. В отзывах её имя упоминают чаще всего.</p>
+      </div>
+      <div class="master-quote reveal">
+        <div class="mq">
+          <span class="qm">“</span>
+          <p>Хожу сюда регулярно к косметологу Светлане, каждый раз выхожу в счастье, она настоящий профессионал: и как человек, и как врач, и похохотать успеваем, и за кожей качественно поухаживать.</p>
+          <span>Zubr · отзыв от 13 мая 2024</span>
+        </div>
+        <div class="mq">
+          <span class="qm">“</span>
+          <p>Замечательный мастер Светлана!!! Профессионал!!! Всегда найдут время удобное для клиента!!!</p>
+          <span>Сергей Герчиков · отзыв от 19 февраля 2025</span>
+        </div>
+        <p class="master-note">В салоне также работают <b>парикмахеры-универсалы</b>, <b>массажист</b> (кабинет на втором этаже) и <b>мастер ногтевого сервиса</b> - познакомим при записи.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ОТЗЫВЫ ================= -->
+<section class="sec sec-alt" id="reviews">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Отзывы клиентов</p>
+      <h2>Что говорят о «Студии Люкс»</h2>
+      <p class="lead">Реальные отзывы с Яндекс Карт - публикуем как есть, без правок текста.</p>
+    </div>
+    <div class="reviews-grid">
+      <article class="rev-card reveal">
+        <div class="rev-top">
+          <span class="rev-ava av-1">СГ</span>
+          <span class="rev-who"><b>Сергей Герчиков</b><span>19 февраля 2025</span></span>
+        </div>
+        <div class="rev-stars">
+          <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.26 6.6.56-5 4.4 1.5 6.48L12 16.8 5.99 19.7l1.5-6.48-5-4.4 6.6-.56z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.26 6.6.56-5 4.4 1.5 6.48L12 16.8 5.99 19.7l1.5-6.48-5-4.4 6.6-.56z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.26 6.6.56-5 4.4 1.5 6.48L12 16.8 5.99 19.7l1.5-6.48-5-4.4 6.6-.56z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.26 6.6.56-5 4.4 1.5 6.48L12 16.8 5.99 19.7l1.5-6.48-5-4.4 6.6-.56z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.26 6.6.56-5 4.4 1.5 6.48L12 16.8 5.99 19.7l1.5-6.48-5-4.4 6.6-.56z"/></svg>
+        </div>
+        <p>Шикарный салон!!! Уютная атмосфера!!! Всегда предложат кофе! Замечательный мастер Светлана!!! Профессионал!!! Всегда найдут время удобное для клиента!!! Цена соответствует уровню!!!</p>
+        <span class="rev-src"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Отзыв с Яндекс Карт</span>
+      </article>
+      <article class="rev-card reveal">
+        <div class="rev-top">
+          <span class="rev-ava av-2">Z</span>
+          <span class="rev-who"><b>Zubr</b><span>13 мая 2024</span></span>
+        </div>
+        <div class="rev-stars">
+          <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.26 6.6.56-5 4.4 1.5 6.48L12 16.8 5.99 19.7l1.5-6.48-5-4.4 6.6-.56z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.26 6.6.56-5 4.4 1.5 6.48L12 16.8 5.99 19.7l1.5-6.48-5-4.4 6.6-.56z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.26 6.6.56-5 4.4 1.5 6.48L12 16.8 5.99 19.7l1.5-6.48-5-4.4 6.6-.56z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.26 6.6.56-5 4.4 1.5 6.48L12 16.8 5.99 19.7l1.5-6.48-5-4.4 6.6-.56z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.26 6.6.56-5 4.4 1.5 6.48L12 16.8 5.99 19.7l1.5-6.48-5-4.4 6.6-.56z"/></svg>
+        </div>
+        <p>Хожу сюда регулярно к косметологу Светлане, каждый раз выхожу в счастье, она настоящий профессионал: и как человек, и как врач, и похохотать успеваем, и за кожей качественно поухаживать.</p>
+        <span class="rev-src"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Отзыв с Яндекс Карт</span>
+      </article>
+      <article class="rev-card reveal">
+        <div class="rev-top">
+          <span class="rev-ava av-3">МТ</span>
+          <span class="rev-who"><b>Михаил Тюгаев</b><span>6 декабря 2019</span></span>
+        </div>
+        <div class="rev-stars">
+          <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.26 6.6.56-5 4.4 1.5 6.48L12 16.8 5.99 19.7l1.5-6.48-5-4.4 6.6-.56z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.26 6.6.56-5 4.4 1.5 6.48L12 16.8 5.99 19.7l1.5-6.48-5-4.4 6.6-.56z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.26 6.6.56-5 4.4 1.5 6.48L12 16.8 5.99 19.7l1.5-6.48-5-4.4 6.6-.56z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.26 6.6.56-5 4.4 1.5 6.48L12 16.8 5.99 19.7l1.5-6.48-5-4.4 6.6-.56z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.26 6.6.56-5 4.4 1.5 6.48L12 16.8 5.99 19.7l1.5-6.48-5-4.4 6.6-.56z"/></svg>
+        </div>
+        <p>Маленький, уютный салон, домашняя атмосфера. Вежливые мастера, профессионалы высшего класса. Цены умеренные. Есть парковка во дворе. Близко к центру города.</p>
+        <span class="rev-src"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Отзыв с Яндекс Карт</span>
+      </article>
+      <article class="rev-card reveal">
+        <div class="rev-top">
+          <span class="rev-ava av-4">АК</span>
+          <span class="rev-who"><b>Арзер KLD</b><span>1 июля 2023</span></span>
+        </div>
+        <div class="rev-stars">
+          <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.26 6.6.56-5 4.4 1.5 6.48L12 16.8 5.99 19.7l1.5-6.48-5-4.4 6.6-.56z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.26 6.6.56-5 4.4 1.5 6.48L12 16.8 5.99 19.7l1.5-6.48-5-4.4 6.6-.56z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.26 6.6.56-5 4.4 1.5 6.48L12 16.8 5.99 19.7l1.5-6.48-5-4.4 6.6-.56z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.26 6.6.56-5 4.4 1.5 6.48L12 16.8 5.99 19.7l1.5-6.48-5-4.4 6.6-.56z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.26 6.6.56-5 4.4 1.5 6.48L12 16.8 5.99 19.7l1.5-6.48-5-4.4 6.6-.56z"/></svg>
+        </div>
+        <p>Супер мастера! Пафосное название вполне оправдано.</p>
+        <span class="rev-src"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Отзыв с Яндекс Карт</span>
+      </article>
+      <article class="rev-card reveal">
+        <div class="rev-top">
+          <span class="rev-ava av-5">АИ</span>
+          <span class="rev-who"><b>Алёна Иванова</b><span>1 сентября 2024</span></span>
+        </div>
+        <div class="rev-stars">
+          <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.26 6.6.56-5 4.4 1.5 6.48L12 16.8 5.99 19.7l1.5-6.48-5-4.4 6.6-.56z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.26 6.6.56-5 4.4 1.5 6.48L12 16.8 5.99 19.7l1.5-6.48-5-4.4 6.6-.56z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.26 6.6.56-5 4.4 1.5 6.48L12 16.8 5.99 19.7l1.5-6.48-5-4.4 6.6-.56z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.26 6.6.56-5 4.4 1.5 6.48L12 16.8 5.99 19.7l1.5-6.48-5-4.4 6.6-.56z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.26 6.6.56-5 4.4 1.5 6.48L12 16.8 5.99 19.7l1.5-6.48-5-4.4 6.6-.56z"/></svg>
+        </div>
+        <p>Прекрасный салон. На втором этаже массаж.</p>
+        <span class="rev-src"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Отзыв с Яндекс Карт</span>
+      </article>
+      <article class="rev-card reveal">
+        <div class="rev-top">
+          <span class="rev-ava av-6">А</span>
+          <span class="rev-who"><b>Аноним</b><span>9 января 2020</span></span>
+        </div>
+        <div class="rev-stars">
+          <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.26 6.6.56-5 4.4 1.5 6.48L12 16.8 5.99 19.7l1.5-6.48-5-4.4 6.6-.56z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.26 6.6.56-5 4.4 1.5 6.48L12 16.8 5.99 19.7l1.5-6.48-5-4.4 6.6-.56z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.26 6.6.56-5 4.4 1.5 6.48L12 16.8 5.99 19.7l1.5-6.48-5-4.4 6.6-.56z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.26 6.6.56-5 4.4 1.5 6.48L12 16.8 5.99 19.7l1.5-6.48-5-4.4 6.6-.56z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.26 6.6.56-5 4.4 1.5 6.48L12 16.8 5.99 19.7l1.5-6.48-5-4.4 6.6-.56z"/></svg>
+        </div>
+        <p>Квалифицированные мастера. Уютная атмосфера в салоне!</p>
+        <span class="rev-src"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Отзыв с Яндекс Карт</span>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FAQ ================= -->
+<section class="sec" id="faq">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Вопросы и ответы</p>
+      <h2>Частые вопросы</h2>
+    </div>
+    <div class="faq-list reveal">
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">Есть ли у салона парковка?
+          <span class="fx"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
+        </button>
+        <div class="faq-a"><div><p>Да. По отзывам клиентов, во дворе дома есть парковка - можно заехать прямо ко входу и не искать место на улице.</p></div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">Делают ли в салоне массаж?
+          <span class="fx"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
+        </button>
+        <div class="faq-a"><div><p>Да, массажный кабинет расположен на втором этаже здания салона. Запись на массаж - по телефону или через форму на сайте.</p></div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">Сколько стоят услуги?
+          <span class="fx"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
+        </button>
+        <div class="faq-a"><div><p>Клиенты называют цены умеренными: «цена соответствует уровню». Точную стоимость администратор назовёт при записи - она зависит от длины и густоты волос, объёма и сложности процедуры.</p></div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">Как записаться и в какое время работает салон?
+          <span class="fx"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
+        </button>
+        <div class="faq-a"><div><p>Салон работает Пн–Сб с 09:00 до 21:00, Вс с 10:00 до 18:00. Записаться можно по телефону +7 (4012) 93-35-55 или кнопкой «Записаться» на этой странице - администратор перезвонит и подтвердит время.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= КОНТАКТЫ ================= -->
+<section class="sec sec-dark" id="contacts">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Контакты</p>
+      <h2>Приходите в гости - мы в центре города</h2>
+    </div>
+    <div class="contacts-grid">
+      <div class="reveal">
+        <div class="c-list">
+          <div class="c-item">
+            <span class="c-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-5.6-7-11a7 7 0 0 1 14 0c0 5.4-7 11-7 11z"/><circle cx="12" cy="10" r="2.6"/></svg></span>
+            <div>
+              <b>Адрес</b>
+              <p>г. Калининград, ул. Карла Маркса, 30, 1 этаж</p>
+              <p class="sub">Центральный район, близко к центру города</p>
+            </div>
+          </div>
+          <div class="c-item">
+            <span class="c-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.13.96.36 1.9.7 2.8a2 2 0 0 1-.45 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.45c.9.34 1.84.57 2.8.7A2 2 0 0 1 22 16.9z"/></svg></span>
+            <div>
+              <b>Телефон</b>
+              <p><a href="tel:+74012933555">+7 (4012) 93-35-55</a></p>
+              <p class="sub">Запись по телефону и онлайн</p>
+            </div>
+          </div>
+          <div class="c-item">
+            <span class="c-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg></span>
+            <div>
+              <b>Часы работы</b>
+              <p>Пн–Сб: 09:00–21:00 · Вс: 10:00–18:00</p>
+              <p class="sub">Рекомендуем предварительную запись</p>
+            </div>
+          </div>
+          <div class="c-item">
+            <span class="c-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l1.6-4.8A2 2 0 0 1 7.5 6h9a2 2 0 0 1 1.9 1.2L20 12v6a1 1 0 0 1-1 1h-1.4a1 1 0 0 1-1-1v-1h-9.2v1a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-6z"/><circle cx="8" cy="14.6" r="1.2"/><circle cx="16" cy="14.6" r="1.2"/></svg></span>
+            <div>
+              <b>Парковка</b>
+              <p>Бесплатная парковка во дворе</p>
+              <p class="sub">Заезжайте во двор - место найдётся</p>
+            </div>
+          </div>
+          <div class="c-item">
+            <span class="c-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20h16M6 20V9l6-5 6 5v11M10 20v-5h4v5"/></svg></span>
+            <div>
+              <b>Как добраться</b>
+              <p>Вход с улицы, крыльцо со ступенями и перилами, вывеска «Студия Люкс»</p>
+              <p class="sub">Массажный кабинет - на втором этаже</p>
+            </div>
+          </div>
+        </div>
+        <div class="contacts-cta">
+          <button class="btn btn-gold" data-book>Записаться онлайн</button>
+          <a class="btn btn-ghost" href="tel:+74012933555">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.13.96.36 1.9.7 2.8a2 2 0 0 1-.45 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.45c.9.34 1.84.57 2.8.7A2 2 0 0 1 22 16.9z"/></svg>
+            Позвонить
+          </a>
+        </div>
+      </div>
+      <div class="contacts-media reveal">
+        
+        <figure class="cm-2">
+          <img src="studio_lux_photo01.jpg" width="1280" height="960" alt="Вход в салон Студия Люкс: крыльцо с перилами и навесом" loading="lazy">
+          <figcaption>Вход в салон - крыльцо с перилами</figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ФУТЕР ================= -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="foot-in">
+      <span class="foot-brand"><span class="logo-mark"><span>L</span></span>Studio <em>Lux</em></span>
+      <div class="foot-info">
+        г. Калининград, ул. Карла Маркса, 30 · +7 (4012) 93-35-55<br>
+        Пн–Сб 09:00–21:00 · Вс 10:00–18:00
+      </div>
+    </div>
+    <div class="foot-legal">
+      <span>© <span id="year">2025</span> Салон красоты «Студия Люкс». Все права защищены.</span>
+      <span>Информация на сайте не является публичной офертой.</span>
+    </div>
+  </div>
+
+    <div class="footer-brand">
+      <span class="brand-made">created by</span>
+      <a class="brand-link" href="https://t.me/ALTAVALTA" target="_blank" rel="noopener">
+        <span class="sig-name"><b>A</b> <b>L</b> <b>T</b> <b>A</b> <b class="brand-core">V</b> <b>A</b> <b>L</b> <b>T</b> <b>A</b></span>
+      </a>
+    </div>
+</footer>
+
+<!-- ================= МОДАЛЬНОЕ ОКНО ЗАПИСИ ================= -->
+<div class="modal" id="bookModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="bookTitle">
+  <div class="modal-card">
+    <button class="modal-close" id="modalClose" aria-label="Закрыть окно записи">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg>
+    </button>
+    <div class="modal-body" id="modalFormView">
+      <div class="m-form-side">
+        <p class="eyebrow">Онлайн-запись</p>
+        <h3 id="bookTitle">Запись в «Студию Люкс»</h3>
+        <p class="m-sub">Оставьте контакты - администратор перезвонит и подтвердит время.</p>
+        <form id="bookForm" novalidate>
+          <div class="f-grid">
+            <div class="f-field">
+              <label for="fName">Имя <i>*</i></label>
+              <input type="text" id="fName" name="name" placeholder="Как к вам обращаться" required autocomplete="name">
+            </div>
+            <div class="f-field">
+              <label for="fPhone">Телефон <i>*</i></label>
+              <input type="tel" id="fPhone" name="phone" placeholder="+7 (___) ___-__-__" required autocomplete="tel">
+            </div>
+            <div class="f-field">
+              <label for="fService">Услуга</label>
+              <select id="fService" name="service">
+                <option value="" selected>Выберите услугу</option>
+                <option>Женская стрижка</option>
+                <option>Мужская стрижка</option>
+                <option>Окрашивание</option>
+                <option>Укладка</option>
+                <option>Уход за волосами</option>
+                <option>Консультация косметолога</option>
+                <option>Anti-age процедуры</option>
+                <option>Аппаратная косметология, LPG</option>
+                <option>Инъекционные процедуры</option>
+                <option>Дарсонвализация</option>
+                <option>Массаж</option>
+                <option>Маникюр</option>
+                <option>Другое</option>
+              </select>
+            </div>
+            <div class="f-field">
+              <label for="fTime">Удобное время</label>
+              <select id="fTime" name="time">
+                <option value="" selected>Любое время</option>
+                <option>Утро (09:00–12:00)</option>
+                <option>День (12:00–16:00)</option>
+                <option>Вечер (16:00–21:00)</option>
+              </select>
+            </div>
+            <div class="f-field full">
+              <label for="fComment">Комментарий</label>
+              <textarea id="fComment" name="comment" placeholder="Пожелания, длина волос, вопросы - всё, что поможет нам подготовиться"></textarea>
+            </div>
+            <div class="f-field full">
+              <button type="submit" class="btn btn-gold btn-block">Отправить заявку</button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <aside class="m-aside">
+        <b class="lab">Быстрее по телефону?</b>
+        <a class="m-phone" href="tel:+74012933555">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.13.96.36 1.9.7 2.8a2 2 0 0 1-.45 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.45c.9.34 1.84.57 2.8.7A2 2 0 0 1 22 16.9z"/></svg>
+          +7 (4012)<br>93-35-55
+        </a>
+        <ul>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>
+            <span>Пн–Сб 09:00–21:00<br>Вс 10:00–18:00</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-5.6-7-11a7 7 0 0 1 14 0c0 5.4-7 11-7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>
+            <span>Калининград, ул. Карла Маркса, 30</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l1.6-4.8A2 2 0 0 1 7.5 6h9a2 2 0 0 1 1.9 1.2L20 12v6a1 1 0 0 1-1 1h-1.4a1 1 0 0 1-1-1v-1h-9.2v1a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-6z"/><circle cx="8" cy="14.6" r="1.2"/><circle cx="16" cy="14.6" r="1.2"/></svg>
+            <span>Парковка для клиентов во дворе</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+            <span>Точную стоимость назовём при подтверждении записи</span>
+          </li>
+        </ul>
+      </aside>
+    </div>
+    <div class="m-success" id="modalSuccess" hidden>
+      <span class="ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
+      <h3>Заявка отправлена</h3>
+      <p>Спасибо! Администратор «Студии Люкс» свяжется с вами в ближайшее время, чтобы подтвердить запись и назвать точную стоимость услуги.</p>
+      <button class="btn btn-gold" id="successOk">Отлично</button>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  'use strict';
+
+  /* ---------- бургер-меню ---------- */
+  var menuBtn = document.getElementById('menuBtn');
+  var mobileMenu = document.getElementById('mobileMenu');
+
+  function setMenu(open){
+    document.body.classList.toggle('menu-open', open);
+    menuBtn.classList.toggle('is-open', open);
+    menuBtn.setAttribute('aria-expanded', String(open));
+    menuBtn.setAttribute('aria-label', open ? 'Закрыть меню' : 'Открыть меню');
+  }
+  menuBtn.addEventListener('click', function(){
+    setMenu(!document.body.classList.contains('menu-open'));
+  });
+  mobileMenu.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', function(){ setMenu(false); });
+  });
+  window.addEventListener('resize', function(){
+    if (window.innerWidth > 960) setMenu(false);
+  });
+
+  /* ---------- модальное окно записи ---------- */
+  var modal = document.getElementById('bookModal');
+  var modalClose = document.getElementById('modalClose');
+  var formView = document.getElementById('modalFormView');
+  var successView = document.getElementById('modalSuccess');
+  var bookForm = document.getElementById('bookForm');
+  var serviceSel = document.getElementById('fService');
+  var nameInput = document.getElementById('fName');
+  var lastFocused = null;
+
+  function openModal(serviceName){
+    lastFocused = document.activeElement;
+    if (serviceName){
+      var found = Array.prototype.slice.call(serviceSel.options).some(function(o){
+        if (o.value === serviceName){ serviceSel.value = serviceName; return true; }
+        return false;
+      });
+      if (!found) serviceSel.value = '';
+    }
+    modal.classList.add('open');
+    modal.setAttribute('aria-hidden','false');
+    document.body.classList.add('modal-open');
+    document.body.style.overflow = 'hidden';
+    setTimeout(function(){ if(nameInput) nameInput.focus(); }, 80);
+  }
+  function closeModal(){
+    modal.classList.remove('open');
+    modal.setAttribute('aria-hidden','true');
+    document.body.classList.remove('modal-open');
+    document.body.style.overflow = '';
+    if (lastFocused && lastFocused.focus) lastFocused.focus();
+  }
+
+  document.addEventListener('click', function(e){
+    var trigger = e.target.closest('[data-book]');
+    if (trigger){
+      e.preventDefault();
+      setMenu(false);
+      openModal(trigger.getAttribute('data-service') || '');
+    }
+  });
+
+  modalClose.addEventListener('click', closeModal);
+  modal.addEventListener('mousedown', function(e){
+    if (e.target === modal) closeModal(); /* клик по затемнению */
+  });
+  document.addEventListener('keydown', function(e){
+    if (e.key === 'Escape'){
+      if (modal.classList.contains('open')) closeModal();
+      if (document.body.classList.contains('menu-open')) setMenu(false);
+    }
+  });
+
+  bookForm.addEventListener('submit', function(e){
+    e.preventDefault();
+    var name = document.getElementById('fName');
+    var phone = document.getElementById('fPhone');
+    if (!name.value.trim()){ name.focus(); name.style.borderColor='#b3402e'; return; }
+    if (!phone.value.trim()){ phone.focus(); phone.style.borderColor='#b3402e'; return; }
+    name.style.borderColor=''; phone.style.borderColor='';
+    
+    /* ---------- ALTAVALTA lead worker ---------- */
+    var payload = {
+      name: (function(){ var el=document.getElementById('fName'); return el?el.value.trim():''; })(),
+      phone: (function(){ var el=document.getElementById('fPhone'); return el?el.value.trim():''; })(),
+      service: (function(){ var el=document.getElementById('fService'); return el?el.value:''; })(),
+      time: (function(){ var el=document.getElementById('fTime'); return el?el.value:''; })(),
+      comment: (function(){ var el=document.getElementById('fComment'); return el?el.value.trim():''; })(),
+      source: 'studio-lux'
+    };
+    var btn = bookForm.querySelector('[type="submit"]');
+    if(btn){ btn.disabled = true; }
+    var ctrl = new AbortController();
+    var timer = setTimeout(function(){ ctrl.abort(); }, 20000);
+    fetch('https://altavalta-leads.altavalta.workers.dev/', {
+      method: 'POST',
+      headers: {'Content-Type':'application/json','X-Lead-Key':'AV-1UqZW0lEhgXpGRBjkG1TF0yn'},
+      body: JSON.stringify(payload),
+      signal: ctrl.signal
+    }).then(function(r){ return r.text().then(function(t){ try{return JSON.parse(t);}catch(e){return {ok:false,http:r.status};} }); })
+      .then(function(res){
+        clearTimeout(timer);
+        if(btn){ btn.disabled = false; }
+        if(res && res.ok){
+          formView.hidden = true;
+          successView.hidden = false;
+        } else {
+          alert('Не удалось отправить. Позвоните нам: +7 401 293-35-55');
+        }
+      })
+      .catch(function(){
+        clearTimeout(timer);
+        if(btn){ btn.disabled = false; }
+        alert('Не удалось отправить. Позвоните нам: +7 401 293-35-55');
+      });
+    /* ---------- /worker ---------- */
+  });
+  document.getElementById('successOk').addEventListener('click', function(){
+    closeModal();
+    setTimeout(function(){
+      bookForm.reset();
+      formView.hidden = false;
+      successView.hidden = true;
+    }, 350);
+  });
+
+  /* ---------- FAQ аккордеон ---------- */
+  document.querySelectorAll('.faq-item').forEach(function(item){
+    var q = item.querySelector('.faq-q');
+    q.addEventListener('click', function(){
+      var isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item.open').forEach(function(o){
+        o.classList.remove('open');
+        o.querySelector('.faq-q').setAttribute('aria-expanded','false');
+      });
+      if (!isOpen){
+        item.classList.add('open');
+        q.setAttribute('aria-expanded','true');
+      }
+    });
+  });
+
+  /* ---------- появление блоков при прокрутке ---------- */
+  var revealEls = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if (en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); }
+      });
+    }, { threshold: 0.12 });
+    revealEls.forEach(function(el){ io.observe(el); });
+  } else {
+    revealEls.forEach(function(el){ el.classList.add('in'); });
+  }
+
+  /* ---------- год в футере ---------- */
+  document.getElementById('year').textContent = String(new Date().getFullYear());
+})();
+</script>
+
+<script>
+  (function(){
+    var btn = document.getElementById('demoRemove');
+    if(!btn) return;
+    btn.addEventListener('click', function(){ document.body.classList.add('demo-off'); });
+  })();
+</script>
+</body>
+</html>
